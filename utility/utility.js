@@ -44,6 +44,12 @@ class Utility{
         return category;  
     }  
 
+    static escapeHTML(text) {  
+        var replacements= {'<': '&lt;', '>': '&gt;','&': '&amp;', '"': '&quot;'};                      
+        return text.replace(/[<>&"]/g, function(character) {  
+            return replacements[character];  
+        });
+    }
 }
 
 module.exports = Utility;
