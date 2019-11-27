@@ -25,6 +25,8 @@ class Utility{
         }
     }
 
+    static getCategory(age) {  
+        var category = '';  
         switch (true) {  
         case isNaN(age):  
             category = 'not an age';  
